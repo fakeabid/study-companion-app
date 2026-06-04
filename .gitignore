@@ -1,0 +1,68 @@
+# ==========================================
+# Django & Python Specifics
+# ==========================================
+*.py[cod]
+*$py.class
+__pycache__/
+.pytest_cache/
+.cache/
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.mo
+*.pot
+
+# Django local settings & environment files
+db.sqlite3
+db.sqlite3-journal
+local_settings.py
+.env
+*.env
+.venv
+venv/
+ENV/
+env/
+ENV/
+
+# Django media & collected static directories
+/static/
+/staticfiles/
+/media/
+
+# ==========================================
+# Node / React Specifics
+# ==========================================
+node_modules/
+/npm-debug.log*
+/yarn-clean.log*
+/yarn-error.log*
+.pnpm-debug.log*
+
+# React Build outputs
+/build/
+/dist/
+/out/
+
+# CRA / Vite / Next.js test caches and logs
+.eslintcache
+.stylelintcache
+.tsbuildinfo
+.vite/
+.parcel-cache/
+
+# ==========================================
+# IDEs, Editors & OS Artifacts
+# ==========================================
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
