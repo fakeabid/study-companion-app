@@ -27,6 +27,7 @@ venv/
 ENV/
 env/
 ENV/
+media/
 
 # Django media & collected static directories
 /static/

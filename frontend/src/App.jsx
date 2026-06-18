@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import { AnimatedBackground } from './components/AnimatedBackground'
 import { AuthPage } from './pages/AuthPage'
 import { DashboardPage } from './pages/DashboardPage'
+import { WorkspaceDetailPage } from './pages/WorkspaceDetailPage'
 import { useAuthStore } from './stores/authStore'
 
 function ProtectedRoute({ children }) {
@@ -43,6 +44,14 @@ function App() {
           element={
             <ProtectedRoute>
               <DashboardPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/workspaces/:workspaceId"
+          element={
+            <ProtectedRoute>
+              <WorkspaceDetailPage />
             </ProtectedRoute>
           }
         />

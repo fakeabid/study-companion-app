@@ -180,7 +180,7 @@ class DocumentUploadTests(APITestCase):
         self.assertTrue(doc.file.storage.exists(doc.file.name))
 
     def test_storage_increases_after_upload(self):
-        from documents.validators import get_storage_info
+        from apps.documents.validators import get_storage_info
         before = get_storage_info(self.user)["used_bytes"]
         self._upload("notes.pdf", size=2048)
         after = get_storage_info(self.user)["used_bytes"]
@@ -394,7 +394,7 @@ class DocumentDeleteTests(APITestCase):
         self.assertFalse(storage.exists(file_name))
 
     def test_storage_decreases_after_delete(self):
-        from documents.validators import get_storage_info
+        from apps.documents.validators import get_storage_info
         doc = self._upload_real_file()
         before = get_storage_info(self.user)["used_bytes"]
         self.client.delete(delete_url(doc.id))

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useAuthStore } from '../stores/authStore'
 import { useWorkspacesStore } from '../stores/workspacesStore'
@@ -172,6 +173,9 @@ export function DashboardPage() {
                         </p>
                       </div>
                       <div className="flex gap-2">
+                        <Link to={`/workspaces/${workspace.id}`} className="btn-primary">
+                          Open
+                        </Link>
                         <button
                           type="button"
                           className="btn-ghost"
