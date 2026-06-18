@@ -25,6 +25,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     'apps.users',
     'apps.workspaces',
+    'apps.documents',
 ]
 
 DJANGO_APPS = [
@@ -148,21 +149,23 @@ SIMPLE_JWT = {
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
+LANGUAGE_CODE = "en-us"
+TIME_ZONE = "UTC"
 USE_I18N = True
-
 USE_TZ = True
+ 
+# ---------------------------------------------------------------------------
+# Media Files (uploaded documents)
+# ---------------------------------------------------------------------------
+ 
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+ 
+# ---------------------------------------------------------------------------
+# Static Files
+# ---------------------------------------------------------------------------
+ 
+STATIC_URL = "static/"
+ 
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
-
-STATIC_URL = 'static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
